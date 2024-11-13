@@ -1,0 +1,7 @@
+<div class="row">
+  <ng-container *ngFor="let card of favCards">
+    <div class="col-md-4 costum-margin">
+      <app-card [index]="card" [isFullLink]="true"></app-card>
+    </div>
+  </ng-container>
+</div>

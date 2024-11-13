@@ -1,0 +1,24 @@
+.card {
+  width: fit-content;
+  position: relative;
+  .hover-bg {
+    position: absolute;
+    background: rgba(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0p;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  &:hover {
+    .hover-bg {
+      display: flex !important;
+    }
+  }
+}

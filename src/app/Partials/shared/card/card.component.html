@@ -1,0 +1,16 @@
+<div class="card">
+  <img [src]="index" alt="" *ngIf="isFullLink">
+  <img [src]="'https://picsum.photos/450?id=' + index" alt="" *ngIf="!isFullLink">
+  <div class="hover-bg" *ngIf="!isDetailPage">
+    <ng-container *ngIf="!isFullLink">
+      <button class="btn btn-dark" (click)="addToFavorites('https://picsum.photos/450?id=' + index)">
+        Add Favorite
+      </button>
+    </ng-container>
+    <ng-container *ngIf="isFullLink">
+      <button class="btn btn-dark" (click)="navigate()">
+        See Detail
+      </button>
+    </ng-container>
+  </div>
+</div>

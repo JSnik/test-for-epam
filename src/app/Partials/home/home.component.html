@@ -1,0 +1,10 @@
+<div class="row">
+  <ng-container *ngFor="let card of cards; let i = index">
+    <div class="col-md-4 costum-margin">
+      <app-card [index]="i" (addFavorite)="addFavoriteFunc($event)"></app-card>
+    </div>
+  </ng-container>
+</div>
+<div class="loading" *ngIf="loading">
+  <h3 class="loader">Images are loading...</h3>
+</div>
